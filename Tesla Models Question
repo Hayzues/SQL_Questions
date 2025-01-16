@@ -1,0 +1,33 @@
+/*
+Tesla just provided their quarterly sales for their major vehicles.
+
+Determine which Tesla Model has made the most profit.
+
+Include all columns with the "profit" column at the end.
+*/
+
+Create Table Tesla_Models(
+    Tesla_Model Text
+  , Car_Price numeric
+  , Cars_Sold numeric
+  , Production_costs numeric
+)
+Insert into Tesla_Models
+	Values('Model 3', 46990, 156357, 21000);
+Insert into Tesla_models
+	Values('Model S', 104990, 23464, 43000);
+Insert into Tesla_models
+	Values('Model X', 120990, 19542, 48000);
+Insert into Tesla_models
+	Values('Model Y', 65990, 191451, 35000);
+
+SELECT 
+    *
+  , (car_price - production_costs) * cars_sold AS profit
+FROM tesla_models 
+ORDER BY profit DESC
+LIMIT 1;
+
+/*
+Answer: Tesla Model Y with a profit of 5933066490
+*/
