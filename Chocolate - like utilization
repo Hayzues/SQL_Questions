@@ -1,0 +1,38 @@
+/*
+I love chocolate and only want delicious baked goods that have chocolate in them!
+
+Write a Query to return bakery items that contain the word "Chocolate".
+*/
+
+Create Table Bakery_Items(
+	Product_name text
+)
+
+Insert Into Bakery_Items
+	Values('Double Chocolate Doughnut');
+Insert Into Bakery_Items
+	Values('Sweet Loaf');
+Insert Into Bakery_Items
+	Values('Croissant');
+Insert Into Bakery_Items
+	Values('Chocolate Banana Muffin');
+Insert Into Bakery_Items
+	Values('Glazed Doughnut');
+Insert Into Bakery_Items
+	Values('Cinnamon Roll');
+Insert Into Bakery_Items
+	Values('Cheese Danish');
+Insert Into Bakery_Items
+	Values('Peanut Butter Chocolate Pound Cake');
+Insert Into Bakery_Items
+	Values('Fruit Tart');
+
+Select Product_name
+From Bakery_items
+Where Product_name like '%Chocolate%'
+
+/*
+Answer: 1) Double Chocolate Doughnut
+		2) Chocolate Banana Muffin
+		3) Peanut Butter Chocolate Pound Cake
+*/
